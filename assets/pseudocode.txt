@@ -1,0 +1,9 @@
+1. click event with a function
+    a. check what button was pushed.
+    b. if a number display it
+    c. if it is an operator move to next function
+    d. once and operator is entered store the number in a variable (1stNumber, 2ndNumber)
+    e. display & identify? the operator
+    f. once operator is chosen it will accept number for 2nd number
+    g. once equal is selected complete the function/equation
+2. Clear function
