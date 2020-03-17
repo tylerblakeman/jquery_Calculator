@@ -1,6 +1,16 @@
 $(document).ready(function() {
 
-// Your code here...
+var firstNumber = ""
+var secondNumber = ""
+var operator = ""
+var totalResult = ""
+
+
+$("button").on("click", function(){
+
+})
+
+
 
 
 });
