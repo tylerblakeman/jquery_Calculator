@@ -36,12 +36,11 @@ $(document).ready(function() {
 				operatorDisplay.text(operator);
 			}
 		} else if (buttonClick === "clear") {
-            clearDisplay();
+			clearDisplay();
 		} else if (buttonClick === "equals") {
-            equalsFunction();
-            totalResult = equalsFunction();
-            resultDisplay.text(totalResult);
-        
+			totalResult = equalsFunction();
+			console.log(totalResult);
+			resultDisplay.text("= " + totalResult);
 		} else {
 			if (operator) {
 				secondNumber += buttonClick;
@@ -53,36 +52,40 @@ $(document).ready(function() {
 				firstNumDisplay.text(firstNumber);
 			}
 		}
-    });
-    function clearDisplay(){
-        firstNumber = "";
-        secondNumber = "";
-        operator = "";
-        totalResult = "";
-        operatorDisplay.text(operator);
-        firstNumDisplay.text(firstNumber);
-        secondNumDisplay.text(secondNumber);
-        resultDisplay.text(totalResult);
-    }
+	});
+	function clearDisplay() {
+		firstNumber = "";
+		secondNumber = "";
+		operator = "";
+		totalResult = "";
+		operatorDisplay.text(operator);
+		firstNumDisplay.text(firstNumber);
+		secondNumDisplay.text(secondNumber);
+		resultDisplay.text(totalResult);
+	}
 
-    function equalsFunction() {
-        switch (operator) {
-            case "minus":
-                return firstNumber-secondNumber;
-                break;
-            case "plus":
-                return firstNumber+secondNumber;
-                break;
-            case "times":
-                return firstNumber*secondNumber;
-                break;
-            case "divide":
-                return firstNumber/secondNumber;
-                break;
-            case "power":
-                return Math.pow(firstNumber,secondNumber);
-                break;
-            default:
-                break
-    }
+	function equalsFunction() {
+		firstNumber = parseInt(firstNumber);
+
+		secondNumber = parseInt(secondNumber);
+		switch (operator) {
+			case "-":
+				return firstNumber - secondNumber;
+				break;
+			case "+":
+				return firstNumber + secondNumber;
+				break;
+			case "x":
+				return firstNumber * secondNumber;
+				break;
+			case "÷":
+				return firstNumber / secondNumber;
+				break;
+			case "^":
+				return Math.pow(firstNumber, secondNumber);
+				break;
+			default:
+				break;
+		}
+	}
 });
