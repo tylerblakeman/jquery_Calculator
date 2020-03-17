@@ -43,9 +43,11 @@ $(document).ready(function() {
 			} else if (buttonClick === "clear") {
 				clearDisplay();
 			} else if (buttonClick === "equals") {
-				totalResult = equalsFunction();
-				console.log(totalResult);
-				resultDisplay.text("= " + totalResult);
+				if (secondNumber && firstNumber) {
+					totalResult = equalsFunction();
+					console.log(totalResult);
+					resultDisplay.text("= " + totalResult);
+				}
 			} else {
 				if (operator) {
 					secondNumber += buttonClick;
